@@ -1,0 +1,208 @@
+Testbeschreibungen
+
+Test 1: Lesezugriff per [] Operator auf einen falschen Index
+Test 2: Lesezugriff per .at() Funktion auf einen falschen Index
+Test 3: Schreibzugriff per [] Operator auf einen falschen Index
+Test 4: Schreibzugriff per .at() Funktion auf einen falschen Index
+Test 5: Typzuweisungen (double, int, string, myVector<double>), push_back und auslesen der Werte
+Test 6: myVector mit 5 double-Werten initalisieren, arithmetische Operationen, Rückspeicherung der Ergebnisse und Ausgabe des kompletten Vectors
+
+Erwartungen:
+
+Test 1: Programm stürzt ab
+Test 2: Fehlermeldung zu einem falschen Index wird angezeigt und Programm wird kontrolliert beendet
+Test 3: Programm stürzt ab
+Test 4: Fehlermeldung zu einem falschen Index wird angezeigt und Programm wird kontrolliert beendet
+Test 5: Das Programm funktioniert ordnungsgemäß und gibt alle Werte korrekt aus
+Test 6: Das Programm funktioniert ordnungsgemäß, speichert alle Ergebnisse korrekt ein und gibts sie korrekt aus
+
+
+
+
+Ergebnisse:
+
+Test 1:
+
+Size: 1
+Capacity: 8
+Index der ausgelesen werden soll:
+10
+Wert: 1041
+[Enter] zum Schließen der Konsole
+
+
+Test 2:
+
+Size: 1
+Capacity: 8
+Index der ausgelesen werden soll:
+10
+bad index[]!
+
+
+Test 3:
+
+Size: 1
+Capacity: 8
+Index in welchen die Zahl 10 gespeichert werden soll:
+10
+*** Error in `/home/max/NetBeansProjects/WS1718_skroch_p2a1/dist/Debug/GNU-Linux/ws1718_skroch_p2a1': free(): invalid next size (fast): 0x0000000001964c20 ***
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7f07096cb7e5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x7fe0a)[0x7f07096d3e0a]
+/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7f07096d798c]
+/home/max/NetBeansProjects/WS1718_skroch_p2a1/dist/Debug/GNU-Linux/ws1718_skroch_p2a1[0x40143f]
+/home/max/NetBeansProjects/WS1718_skroch_p2a1/dist/Debug/GNU-Linux/ws1718_skroch_p2a1[0x4012d0]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7f0709674830]
+/home/max/NetBeansProjects/WS1718_skroch_p2a1/dist/Debug/GNU-Linux/ws1718_skroch_p2a1[0x401059]
+======= Memory map: ========
+00400000-00402000 r-xp 00000000 08:06 2621620                            /home/max/NetBeansProjects/WS1718_skroch_p2a1/dist/Debug/GNU-Linux/ws1718_skroch_p2a1
+00601000-00602000 r--p 00001000 08:06 2621620                            /home/max/NetBeansProjects/WS1718_skroch_p2a1/dist/Debug/GNU-Linux/ws1718_skroch_p2a1
+00602000-00603000 rw-p 00002000 08:06 2621620                            /home/max/NetBeansProjects/WS1718_skroch_p2a1/dist/Debug/GNU-Linux/ws1718_skroch_p2a1
+01953000-01985000 rw-p 00000000 00:00 0                                  [heap]
+7f0704000000-7f0704021000 rw-p 00000000 00:00 0 
+7f0704021000-7f0708000000 ---p 00000000 00:00 0 
+7f070934b000-7f0709453000 r-xp 00000000 08:06 15074218                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f0709453000-7f0709652000 ---p 00108000 08:06 15074218                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f0709652000-7f0709653000 r--p 00107000 08:06 15074218                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f0709653000-7f0709654000 rw-p 00108000 08:06 15074218                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f0709654000-7f0709813000 r-xp 00000000 08:06 15074220                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f0709813000-7f0709a13000 ---p 001bf000 08:06 15074220                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f0709a13000-7f0709a17000 r--p 001bf000 08:06 15074220                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f0709a17000-7f0709a19000 rw-p 001c3000 08:06 15074220                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f0709a19000-7f0709a1d000 rw-p 00000000 00:00 0 
+7f0709a1d000-7f0709a33000 r-xp 00000000 08:06 15077795                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f0709a33000-7f0709c32000 ---p 00016000 08:06 15077795                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f0709c32000-7f0709c33000 rw-p 00015000 08:06 15077795                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f0709c33000-7f0709da5000 r-xp 00000000 08:06 11796878                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f0709da5000-7f0709fa5000 ---p 00172000 08:06 11796878                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f0709fa5000-7f0709faf000 r--p 00172000 08:06 11796878                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f0709faf000-7f0709fb1000 rw-p 0017c000 08:06 11796878                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f0709fb1000-7f0709fb5000 rw-p 00000000 00:00 0 
+7f0709fb5000-7f0709fdb000 r-xp 00000000 08:06 15074221                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f070a1b6000-7f070a1bb000 rw-p 00000000 00:00 0 
+7f070a1d7000-7f070a1da000 rw-p 00000000 00:00 0 
+7f070a1da000-7f070a1db000 r--p 00025000 08:06 15074221                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f070a1db000-7f070a1dc000 rw-p 00026000 08:06 15074221                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f070a1dc000-7f070a1dd000 rw-p 00000000 00:00 0 
+7ffc28fcb000-7ffc28fec000 rw-p 00000000 00:00 0                          [stack]
+7ffc28ff8000-7ffc28ffa000 r--p 00000000 00:00 0                          [vvar]
+7ffc28ffa000-7ffc28ffc000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+Aborted (core dumped)
+[Enter] zum Schließen der Konsole
+
+
+Test 4:
+
+Size: 1
+Capacity: 8
+Index in welchen die Zahl 10 gespeichert werden soll:
+10
+bad index[]
+[Enter] zum Schließen der Konsole
+
+
+Test 5:
+
+int-Wert 1 eingeben!
+10
+int-Wert 2 eingeben!
+15
+int-Wert 3 eingeben!
+20
+double-Wert 1 eingeben!
+0.5
+double-Wert 2 eingeben!
+1.5
+double-Wert 3 eingeben!
+2.5
+string 1 eingeben!
+Hallo  
+string 2 eingeben!
+Welt
+string 3 eingeben!
+Max
+mv2 wird in mv4 gepusht!
+double-Werte in myVector<myVector<double>> eingeben!
+3.5
+double-Werte in myVector<myVector<double>> eingeben!
+4.5
+double-Werte in myVector<myVector<double>> eingeben!
+5.5
+int-Wert 1: 10
+int-Wert 2: 15
+int-Wert 3: 20
+double-Wert 1: 0.5
+double-Wert 2: 1.5
+double-Wert 3: 2.5
+string 1: Hallo
+string 2: Welt
+string 3: Max
+myVector<myVector<double>>-Wert 1: 0.5
+myVector<myVector<double>>-Wert 2: 1.5
+myVector<myVector<double>>-Wert 3: 2.5
+myVector<myVector<double>>-Wert 4: 3.5
+myVector<myVector<double>>-Wert 5: 4.5
+myVector<myVector<double>>-Wert 6: 5.5
+[Enter] zum Schließen der Konsole
+
+
+
+Test 6:
+
+mv1[0] = 1.5
+mv1[1] = 2.5
+mv1[2] = 3.5
+mv1[3] = 4.5
+mv1[4] = 5.5
+mv1[0] + mv1[1] = 4
+mv1[3] - mv1[2] = 1
+mv1[4] * mv1[5] = 22
+mv1[6] / mv1[7] = 0.0454545
+mv1[0] = 1.5
+mv1[1] = 2.5
+mv1[2] = 3.5
+mv1[3] = 4.5
+mv1[4] = 5.5
+mv1[5] = 4
+mv1[6] = 1
+mv1[7] = 22
+mv1[8] = 0.0454545
+[Enter] zum Schließen der Konsole
+
+
+Auswertung:
+
+Test 1:
+
+Das Programm ist nicht wie vermutet abgestürzt, es wurde ein Wert ausgelesen.
+
+Vermutung: Da nicht aktiv in den Speicher eingegriffen wurde, sondern nur von dort gelesen wurde hat dies das System durchgehen lassen und ist somit nicht abgestürzt, es wurde lediglich der Wert, welcher an der zugegriffenen Speicherstelle hinterlegt war ausgelesen.
+
+
+Test 2:
+
+Das Programm hat wie erwartet eine Fehlermeldung über einen unbefugten Zugriff auf einen falschen Index ausgegeben und hat sich kontrolliert beendet.
+
+
+Test 3:
+
+Das Programm ist wie zuvor angenommen bei Ausführung abgestürzt.
+
+Vermutung: Da hier nun ein Schreibzugriff auf eine unbefugte Speicheradresse vorgenommen wurde hat dies das System verhindert(?) und das Programm ist abgestürzt.
+
+
+Test 4:
+
+Das Programm hat wie erwartet eine Fehlermeldung über einen unbefugten Zugriff auf einen falschen Index ausgegeben und hat sich kontrolliert beendet.
+
+
+Test 5:
+
+Das Programm funktionierte erwartungsgemäß und es wurden keine Fehler bei der Ausführung festgestellt.
+
+
+Test 6:
+
+Das Programm funktionierte erwartungsgemäß und es wurden keine Fehler bei der Ausführung festgestellt.
