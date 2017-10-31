@@ -47,6 +47,7 @@ int main(int argc, char** argv) {
             switch (inteingabe) {
                 case 1:
                     cout << "Geben Sie das Kennzeichen des zu parkenden Fahrzeugs ein!" << endl;
+                    cout << "Hinweis: Es ist darauf zu achten das Kennzeichen in der Form XXX-XXX-XXX einzugeben!" << endl;
                     cin >> stringeingabe;
                     if (!cin)
                         error("Fehler beim Einlesen!");
@@ -56,7 +57,7 @@ int main(int argc, char** argv) {
                             phaus[i].nummer = counter++;
                             break;
                         } else {
-                            if (phaus[i].kennzeichen != "" && i == phaus.size()-1) {
+                            if (phaus[i].kennzeichen != "" && i == phaus.size() - 1) {
                                 cout << "Es gibt keine freien Parkplätze mehr!" << endl;
                             }
                         }
@@ -78,7 +79,7 @@ int main(int argc, char** argv) {
                                 dauercounter++;
                                 break;
                             } else {
-                                if (phaus[i].kennzeichen != "" && i == phaus.size()-1) {
+                                if (phaus[i].kennzeichen != "" && i == phaus.size() - 1) {
                                     cout << "Es gibt keine freien Parkplätze mehr!" << endl;
                                 }
                             }
