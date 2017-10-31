@@ -125,6 +125,10 @@ int main(int argc, char** argv) {
                     break;
                 case 6:
                     break;
+                    
+                default:
+                    cout << "Es wurde keine der geforderten Optionen gewählt!" << endl;
+                    break;
             }
         } while (inteingabe != 6);
 
